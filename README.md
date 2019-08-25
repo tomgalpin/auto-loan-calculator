@@ -1,3 +1,51 @@
+# Tom's Auto Loan Calculator React Practice:
+A simple App using React and an API
+
+## Deploy
+- Live @:  
+  - From:  https://github.com/gitname/react-gh-pages
+
+## Notes:
+1. Calculations from:  https://www.wikihow.com/Calculate-Auto-Loan-Payments
+
+
+## Guidelines
+1. Responsive Auto Loan Calculator.
+2. Use the following inputs:  
+  - Car Price
+  - Downpayment
+  - Loan Duration (BONUS accept both months and years, one input for each)
+  - Interest Rate
+3. Return the following:
+  - Estimated monthly payment
+  - Total interest paid (over the duration of the loan)
+  - BONUS Amortization schedule
+
+## Structure
+    .
+    ├── /public 
+    │     └── favicon.ico
+    │     └── index.html
+    │     └── manifest.json
+    │     └── robots.txt
+    ├── /src     
+    │     ├── /components
+    │     │     ├── loanForm.jsx
+    │     │     └── loanResults.jsx
+    │     ├── /styles                    
+    │     │     ├── reset.css 
+    │     │     ├── variables.scss   
+    │     │     ├── mixins.scss
+    │     │     ├── loan-form.scss 
+    │     │     └── loan-results.scss
+    │     ├── App.scss
+    │     ├── App.test.js
+    │     ├── serviceWorker.js
+    │     └── index.jsx
+    ├── package.json
+    └── README.md
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
@@ -11,58 +59,3 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.<br>
 You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify

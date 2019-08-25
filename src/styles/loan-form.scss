@@ -1,0 +1,130 @@
+.loan-form-container {
+  max-width: 750px;
+  margin: 0 auto;
+  @include green-gradient; 
+  .input-container {
+    margin-bottom: 10px;
+    &.submit-button { 
+      height: auto; 
+      margin-top: 15px;
+    }
+  }
+  .form-container {
+    @include flex-horizontal;
+    align-items: stretch;
+    &.interest,
+    &.duration {
+      input[type=number] {
+        padding-left: 40px;
+        margin-right: -40px;
+      }
+    }
+    &.duration {
+      input[type=number] {
+        margin-right: 0px;
+      }
+    }
+    .symbol {
+      background: $white;
+      width: 40px;
+      height: 40px;
+      line-height: 40px;
+      text-align: center;
+      z-index: 3;
+    }
+  }
+  .error-msg-container {
+    text-align: center;
+    background-color: $white;
+    margin-top: 20px;
+    border: 3px solid red;
+    color: red;
+    padding: 20px 20px 25px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 14px;
+    line-height: 18px;
+  }
+  label,
+  input[type=number] {
+    display: block;
+    font-size: 16px;
+    position: relative;
+  }
+  label {
+    // line-height: 42px;
+    // font-size: 16px;
+    // width: 23%;
+    margin-bottom: 5px;
+    // &:after {
+    //   position: absolute;
+    //   content: "$";
+    //   left: 0;
+    //   right: 0;
+    //   // top:
+    // }
+  }
+  input[type=number] {
+    flex-grow: 1;
+    margin: 0;
+    padding: 0;
+    height: 40px;
+    background: $white;
+    border: none;
+    color: $dark-gray;
+    outline: none;
+  }
+  input[type=submit] {
+    border: none;
+    display: block;
+    background: $flat-blue;
+    height: 50px;
+    width: 100%;
+    color: $white;
+    text-align: center;
+    border-radius: 3px;
+    font-size: 20px;
+    text-transform: uppercase;
+    box-shadow: 8px 8px 16px 0px $black;
+    -webkit-transition: all 0.15s ease;
+    -moz-transition: all 0.15s ease;
+    transition: all 0.15s ease;
+    cursor: pointer;
+    user-select: none;
+    &:hover {
+      background: $sky-blue;
+      box-shadow: 2px 4px 8px 0px $black;
+      outline: 0;
+    }
+    &:focus {outline:0;}
+  }
+
+  @media only screen and (min-width: $lg-mobile) {
+    .input-container {
+      @include flex-horizontal;
+      height: 42px;
+      margin-bottom: 15px;
+      &.submit-button { 
+        margin-top: 25px;
+      }
+    }
+    .error-msg-container {
+      width: 100%;
+    }
+    .form-container {
+      width: 60%;
+    }
+    label,
+    input[type=number] {
+      font-size: 20px;
+    }
+    label { 
+      line-height: 42px;
+      margin-bottom: 0px;
+      width: calc(40% - 20px);
+      margin-right: 20px;
+      text-align: right;
+    }
+  }
+}

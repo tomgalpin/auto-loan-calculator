@@ -1,0 +1,52 @@
+.loan-results-container {
+  div {
+    text-align: center;
+    &:first-child {
+      margin-bottom: 20px;
+      p {
+        font-weight: bold;
+        color: $flat-blue;
+        &:first-child {
+          font-size: 20px;
+          margin-bottom: 5px;
+        }
+        &:last-child {
+          font-size: 18px;
+        }
+      }
+    }
+    &:last-child {
+      p {
+        font-size: 16px;
+        span {
+          margin-right: 10px;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+
+  @media only screen and (min-width: $lg-mobile) {
+    div {
+      &:first-child {
+        p {
+          &:first-child {
+            font-size: 40px;
+            margin-bottom: 15px;
+          }
+          &:last-child {
+            font-size: 35px;
+          }
+        }
+      }
+      &:last-child {
+        p {
+          font-size: 24px;
+          span {
+            margin-right: 15px;
+          }
+        }
+      }
+    }
+  }
+}

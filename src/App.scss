@@ -1,0 +1,50 @@
+@import './styles/reset.css';
+@import './styles/variables.scss';
+@import './styles/mixins.scss';
+
+body {
+  // padding: 30px 30px 40px 30px;
+  min-width: $mobile;
+  * {
+    font-family: $global-font;
+  }
+  h1 {
+    font-weight: bold;
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
+  input[type=number]::-webkit-inner-spin-button, 
+  input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none; 
+    margin: 0; 
+  }
+  #auto-loan-app {
+    padding: 20px 20px 40px 20px;
+  }
+  .hide-fast {
+    display: none;
+  }
+  .show-fast {
+    display: block;
+  }
+  .component {
+    padding: 30px;
+  }
+
+  @media only screen and (min-width: $lg-mobile) {
+    h1 {
+      font-size: 30px;
+    }
+  }
+  @media only screen and (min-width: $desktop) {
+    h1 {
+      font-size: 30px;
+    }
+  }
+}
+
+@import './styles/loan-form.scss';
+@import './styles/loan-results.scss';
+@import './styles/loan-table.scss';
