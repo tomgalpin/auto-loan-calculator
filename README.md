@@ -1,25 +1,29 @@
 # Tom's Auto Loan Calculator React Practice:
 A simple App using React and an API
 
+## Calculations From:  
+- https://www.wikihow.com/Calculate-Auto-Loan-Payments
+- https://m.wikihow.com/Calculate-Amortization
+
 ## Deploy
 - Live @:  
   - From:  https://github.com/gitname/react-gh-pages
 
-## Notes:
-1. Calculations from:  https://www.wikihow.com/Calculate-Auto-Loan-Payments
-
+## Areas of Improvement:
+1. More robust error handling in form input fields
+2. A slider for some of the form input fields
 
 ## Guidelines
 1. Responsive Auto Loan Calculator.
 2. Use the following inputs:  
   - Car Price
   - Downpayment
-  - Loan Duration (BONUS accept both months and years, one input for each)
+  - Loan Duration
   - Interest Rate
 3. Return the following:
   - Estimated monthly payment
   - Total interest paid (over the duration of the loan)
-  - BONUS Amortization schedule
+  - Amortization schedule
 
 ## Structure
     .
@@ -59,3 +63,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.<br>
 You will also see any lint errors in the console.
+
+### `npm test`
+
+Runs the testing suite.
