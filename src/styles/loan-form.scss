@@ -1,3 +1,9 @@
+/****************************
+*****************************
+  LOAN FORM CONTAINER
+*****************************  
+****************************/
+
 .loan-form-container {
   max-width: 750px;
   margin: 0 auto;
@@ -53,17 +59,7 @@
     position: relative;
   }
   label {
-    // line-height: 42px;
-    // font-size: 16px;
-    // width: 23%;
     margin-bottom: 5px;
-    // &:after {
-    //   position: absolute;
-    //   content: "$";
-    //   left: 0;
-    //   right: 0;
-    //   // top:
-    // }
   }
   input[type=number] {
     flex-grow: 1;

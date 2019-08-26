@@ -1,3 +1,9 @@
+/****************************
+*****************************
+  LOAN TABLE CONTAINER
+*****************************  
+****************************/
+
 @import './styles/tables.scss';
 
 .loan-table-container {
@@ -56,9 +62,7 @@
       top: -9999px;
       left: -9999px;
     }
-    
-    // tr { border: 1px solid #ccc; }
-    
+        
     td { 
       /* Behave  like a "row" */
       border: none;

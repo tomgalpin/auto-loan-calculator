@@ -3,7 +3,6 @@
 @import './styles/mixins.scss';
 
 body {
-  // padding: 30px 30px 40px 30px;
   min-width: $mobile;
   * {
     font-family: $global-font;
@@ -14,7 +13,6 @@ body {
     font-size: 20px;
     margin-bottom: 20px;
   }
-
   input[type=number]::-webkit-inner-spin-button, 
   input[type=number]::-webkit-outer-spin-button { 
     -webkit-appearance: none; 
@@ -38,6 +36,7 @@ body {
       font-size: 30px;
     }
   }
+  
   @media only screen and (min-width: $desktop) {
     h1 {
       font-size: 30px;

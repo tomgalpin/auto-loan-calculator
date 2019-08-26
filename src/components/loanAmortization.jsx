@@ -1,7 +1,12 @@
 import React from 'react';
 
 class LoanAmortization extends React.Component {
-  renderTableRows(array) {   
+  renderTableRows(array) {
+    /**
+    * Render Loam Amortization Table rows
+    * @param {array} array 
+    * @return {string} num
+    */  
     return array.map( (rowObj, index) => {
       let month = index + 1;
 
@@ -20,7 +25,6 @@ class LoanAmortization extends React.Component {
   render() {
     const hiddenClass = this.props.table.isHidden ? "hide" : "show";
     const amortizationArray = this.props.table.resultsArray;
-    // const totalInterestPaid = 
 
     return (
       <div className={`loan-table-container component ${hiddenClass}`}>

@@ -16,10 +16,19 @@ class LoanForm extends React.Component {
   }
 
   sendParentFormValues() {
+    /**
+    * Sends state values to Parent Callback function
+    * @return {function} parentCallback()
+    */
     this.props.parentCallback(this.state)
   }
 
   handleChange(event) {
+    /**
+    * Handles form input field event changes
+    * @param {obj} event 
+    * @return {function} setState()
+    */
     const target = event.target;
     const value = target.value;
     const name = target.name;
@@ -30,6 +39,10 @@ class LoanForm extends React.Component {
   }
 
   checkFormValues() {
+    /**
+    * Checks if form field inputs are valid (empty or below a certain number)
+    * @return {bool}
+    */
     if (   
       this.state.price === "" ||
       this.state.downPayment === "" ||
@@ -45,18 +58,33 @@ class LoanForm extends React.Component {
   }
 
   triggerErrorMsg() {
+    /**
+    * Sets the error message in state to true
+    * @return {function} setState()
+    */
     this.setState({
       isError: true
     })
   }
 
   hideErrorMsg() {
+    /**
+    * Sets the error message in state to false
+    * @return {function} setState()
+    */
     this.setState({
       isError: false
     })
   }
 
   handleSubmit(event) {
+    /**
+    * Handles the submit btn in the form fields
+    * @param {obj} event 
+    * @return {function} triggerErrorMsg()
+    * @return {function} hideErrorMsg()
+    * @return {function} sendParentFormValues()
+    */
     event.preventDefault();
     const isError = this.checkFormValues();
 
@@ -65,8 +93,7 @@ class LoanForm extends React.Component {
     } else {
       this.hideErrorMsg();
       this.sendParentFormValues();
-    }
-    
+    } 
   }
 
   render() {
