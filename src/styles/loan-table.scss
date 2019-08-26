@@ -8,7 +8,7 @@
 
 .loan-table-container {
   overflow: scroll;
-  padding: 20px;
+  &.component { padding: 0px; }
   &.hide { 
     display: none;
     opacity: 0;
@@ -19,7 +19,9 @@
     transition: visibility 0s linear 0s, opacity 300ms;
   }
   .table {
-    min-width: 320px;
+    min-width: 278px;
+    max-width: 808px;
+    margin: 0 auto;
     th { 
       padding: 20px; 
     }
@@ -72,6 +74,7 @@
       font-size: 14px;
     }
 
+    .table { width: auto; }
     .column {
       &.month {
         text-align: left;
