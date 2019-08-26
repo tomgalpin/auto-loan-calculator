@@ -81,7 +81,6 @@ class LoanCalculator extends React.Component {
       }, 
       amortization: {
         resultsArray: amortizationResults,
-        totalInterestPaid: "23",
         isHidden: false
       }
     });
@@ -91,42 +90,32 @@ class LoanCalculator extends React.Component {
     /**
       Formula from:  https://m.wikihow.com/Calculate-Amortization
 
-      1. month
-      2. principal (goes down)
-      3. interest payment (goes down)
-      4. principal payment (goes up)
-      5. ending principal (goes down)
-
-      calculate total interest paid at end of table
-
-      2.  principal = totalPrincipal
-      3.  interest payment = principal * (monthly interest rate)
-      4.  principal payment = monthly payment - interest payment
-      5.  ending principal = principal - principal payment 
-
     **/
-    const interestRate = this.state.formValue.interestRate/ 12;
-
-    // console.log(101, interestRate);
+    const interestRate = this.state.formValue.interestRate / 100 / 12;
 
     let principal = totalPrincipal;
+    let payThisMuch = parseFloat(monthlyPayment);
+    let interestPayment = principal * interestRate;
+    let principalPayment = payThisMuch - interestPayment;
+    let endingPrincipal = principal - principalPayment;
     let amortizationArray = [];
 
     for (let i=0; i<duration; i++) {
-      // let monthsToGo = i + 1;
-      let interestPayment = principal * interestRate;
-      let principalPayment = monthlyPayment - interestPayment;
-      let endingPrincipal = principal - principalPayment;
+
+      if (monthlyPayment > endingPrincipal) {
+        payThisMuch = endingPrincipal;
+        principalPayment = payThisMuch - interestPayment;
+        endingPrincipal = 0;
+      } else {
+        interestPayment = principal * interestRate;
+        principalPayment = payThisMuch - interestPayment;
+        endingPrincipal = principal - principalPayment;
+      }
 
       principal = endingPrincipal;
 
-      // console.log("interestpay:  ", interestPayment);
-      // console.log("principalPayment:  ", principalPayment);
-      // console.log("endingPrincipal:  ", endingPrincipal);
-      // console.log("monthlyPayment:  ", monthlyPayment);
-
       let amortizationMonth = {
-        // month: monthsToGo,
+        monthlyPayment: payThisMuch.toFixed(2),
         principalPaid: principal.toFixed(2),
         interestPayment: interestPayment.toFixed(2),
         principalPayment: principalPayment.toFixed(2),

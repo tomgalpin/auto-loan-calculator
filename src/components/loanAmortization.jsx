@@ -7,10 +7,11 @@ class LoanAmortization extends React.Component {
 
       return (
           <tr key={index}>
-            <td>{month}</td>
-            <td>{rowObj.principalPaid}</td> 
-            <td>{rowObj.principalPayment}</td>
-            <td>{rowObj.endingPrincipal}</td>
+            <td className="month column">{month}</td>
+            <td className="monthly-payment column">$ {rowObj.monthlyPayment}</td>
+            <td className="interest-payment column">$ {rowObj.interestPayment}</td> 
+            <td className="principal-payment column">$ {rowObj.principalPayment}</td>
+            <td className="principal-left column">$ {rowObj.endingPrincipal}</td>
           </tr>
         )
     });
@@ -19,13 +20,15 @@ class LoanAmortization extends React.Component {
   render() {
     const hiddenClass = this.props.table.isHidden ? "hide" : "show";
     const amortizationArray = this.props.table.resultsArray;
+    // const totalInterestPaid = 
 
     return (
       <div className={`loan-table-container component ${hiddenClass}`}>
         <table className="table table-condensced table-bordered">
           <thead>
             <tr>
-              <th>Month</th>
+              <th className="month column">Month</th>
+              <th>Monthly Payment</th> 
               <th>Interest Payment</th> 
               <th>Principal Payment</th>
               <th>Principal Left</th>

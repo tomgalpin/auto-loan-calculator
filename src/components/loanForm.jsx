@@ -34,7 +34,9 @@ class LoanForm extends React.Component {
       this.state.price === "" ||
       this.state.downPayment === "" ||
       this.state.duration === "" ||
-      this.state.interestRate === ""
+      this.state.interestRate === "" ||
+      this.state.duration < 1 ||
+      this.state.interestRate < 0.01
      ) {
       return true;
     } else {
@@ -80,6 +82,7 @@ class LoanForm extends React.Component {
               <input 
                 name="price" 
                 type="number"
+                min="0"
                 max="100000" 
                 value={this.state.price} 
                 onChange={this.handleChange}/>
@@ -92,6 +95,7 @@ class LoanForm extends React.Component {
               <input 
               name="downPayment" 
               type="number"
+              min="0"
               max="100000" 
               value={this.state.downPayment} 
               onChange={this.handleChange}/>
@@ -103,6 +107,7 @@ class LoanForm extends React.Component {
               <input 
               name="duration" 
               type="number"
+              min="1"
               max="100000" 
               value={this.state.duration} 
               onChange={this.handleChange}/>
@@ -114,6 +119,7 @@ class LoanForm extends React.Component {
               <input 
               name="interestRate" 
               type="number"
+              min="0"
               max="1000" 
               value={this.state.interestRate} 
               onChange={this.handleChange}/>
