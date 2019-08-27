@@ -6,12 +6,14 @@ A simple App using React and an API
 - https://m.wikihow.com/Calculate-Amortization
 
 ## Deploy
-- Live @:  
+- Live @:  https://tomgalpin.github.io/auto-loan-calculator/
   - From:  https://github.com/gitname/react-gh-pages
 
 ## Areas of Improvement:
 1. More robust error handling in form input fields
 2. A slider for some of the form input fields
+3. Older IE compatibility.
+4. Tests
 
 ## Guidelines
 1. Responsive Auto Loan Calculator.
