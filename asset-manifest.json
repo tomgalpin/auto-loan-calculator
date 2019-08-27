@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/auto-loan-calculator/static/css/main.ddc5b769.chunk.css",
+    "main.js": "/auto-loan-calculator/static/js/main.5e97a2eb.chunk.js",
+    "main.js.map": "/auto-loan-calculator/static/js/main.5e97a2eb.chunk.js.map",
+    "runtime~main.js": "/auto-loan-calculator/static/js/runtime~main.1fade5bc.js",
+    "runtime~main.js.map": "/auto-loan-calculator/static/js/runtime~main.1fade5bc.js.map",
+    "static/js/2.989094da.chunk.js": "/auto-loan-calculator/static/js/2.989094da.chunk.js",
+    "static/js/2.989094da.chunk.js.map": "/auto-loan-calculator/static/js/2.989094da.chunk.js.map",
+    "index.html": "/auto-loan-calculator/index.html",
+    "precache-manifest.e87788d29bda95300cfb201d445d0182.js": "/auto-loan-calculator/precache-manifest.e87788d29bda95300cfb201d445d0182.js",
+    "service-worker.js": "/auto-loan-calculator/service-worker.js",
+    "static/css/main.ddc5b769.chunk.css.map": "/auto-loan-calculator/static/css/main.ddc5b769.chunk.css.map"
+  }
+}
